@@ -26,6 +26,13 @@ struct AddOrder: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.presentationMode) var presentationMode
 
+    @Environment(\.managedObjectContext) private var viewContext
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Order.id, ascending: true)],
+        animation: .default)
+    private var order: FetchedResults<Order>
+    
     @State private var id = 0
     @State private var orderDescription = ""
     @State private var quote = 0.00

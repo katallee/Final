@@ -2,11 +2,15 @@ import Foundation
 import SwiftUI
 
 struct Orders: View {
-    //@ObservedObject var order = Order()
-    //command+control+space to add emoji when adding buttons for mood
-    @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Order.entity(), sortDescriptors: []) var order: FetchedResults<Order>
+    
 
+    @Environment(\.managedObjectContext) private var viewContext
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Order.id, ascending: true)],
+        animation: .default)
+    private var order: FetchedResults<Order>
+    
     @State private var showingAddOrder = false
 
     var body: some View {
@@ -37,7 +41,7 @@ struct Orders: View {
                         }
                     }
                 }
-
+                
                 Section {
                     NavigationLink(destination: ContentView) {
                         Text("Home")

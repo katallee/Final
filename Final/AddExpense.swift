@@ -46,18 +46,8 @@ struct AddExpense: View {
                     //    ForEach(expenseCategory, id: \.self) {
                     //    Text($0)
                     //    }
-                    
+                
 //move let newExpense outside view
-                    //Save
-                    let newExpense = Order(context: self.moc)
-                    //newExpense.id = UUID(self.id)
-                    newExpense.name = self.name
-                    newExpense.expenseDescription = self.expenseDescription
-                    //newExpense.expenseCategory = self.expenseCategory
-
-                    try? self.moc.save()
-
-                    self.presentationMode.wrappedValue.dismiss()
                 }
                 
               /*  Section {
@@ -71,10 +61,24 @@ struct AddExpense: View {
                         Text("Home")
                     }
                 }
- */
+                     */
             }
+            //Save
+            saveOrder()
         }
         .navigationBarTitle("Add New Expense")
+    }
+    
+    func saveOrder() {
+        let newExpense = Order(context: self.moc)
+        //newExpense.id = UUID(self.id)
+        newExpense.name = self.name
+        newExpense.expenseDescription = self.expenseDescription
+        //newExpense.expenseCategory = self.expenseCategory
+
+        try? self.moc.save()
+
+        self.presentationMode.wrappedValue.dismiss()
     }
 }
 

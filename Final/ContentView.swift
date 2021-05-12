@@ -14,7 +14,7 @@ struct ContentView: View {
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Order.id, ascending: true)],
         animation: .default)
-    private var orders: FetchedResults<Order>
+    private var order: FetchedResults<Order>
     @State private var quotes = ["You are today where your thoughts have brought you. James Allen", "You will face many defeats in life, but never let yourself be defeated. Maya Angelou", "Know yourself and you will win all battles. Sun Tzu"]
     @State private var displayQuote = Int.random(in: 0...2)
     
@@ -28,13 +28,13 @@ struct ContentView: View {
                         }
                     }
                     */
-/*
+
                     Section {
-                        NavigationLink (destination: Orders) {
+                        NavigationLink (destination: Orders()) {
                             Text("Orders")
                         }
                     }
-
+/*
                     Section {
                         NavigationLink (destination: Expenses) {
                             Text("Expenses")
@@ -65,19 +65,24 @@ struct ContentView: View {
                             //Text("Mood Tracker Weekly Report")
                         }
                     }
-                    /*
+                    
+                    pickQuote()
+                    
                     Section {
-                        quotes.shuffle()
-                        displayQuote = Int.random(in: 0...2)
                         VStack {
                             Text(quotes[displayQuote])
                         }
                     }
-                    */
+                    
                 }
             }
             .navigationBarTitle("Orders and Expenses")
         
+    }
+    
+    func pickQuote() {
+        quotes.shuffle()
+        displayQuote = Int.random(in: 0...2)
     }
 
 struct ContentView_Previews: PreviewProvider {

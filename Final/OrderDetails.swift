@@ -4,7 +4,12 @@ import SwiftUI
 struct OrderDetails: View {
     //@ObservedObject var order = Order()
     //command+control+space to add emoji when adding buttons for mood
-    
+    @Environment(\.managedObjectContext) private var viewContext
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Order.id, ascending: true)],
+        animation: .default)
+    private var order: FetchedResults<Order>
     var body: some View {
         NavigationView {
             Form {

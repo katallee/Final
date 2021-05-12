@@ -22,10 +22,15 @@ import Foundation
 import SwiftUI
 
 struct Expenses: View {
-    @ObservedObject var order = Order()
-    //command+control+space to add emoji when adding buttons for mood
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Order.entity(), sortDescriptors: []) var Order: FetchedResults<Order>
+    @Environment(\.presentationMode) var presentationMode
+
+    @Environment(\.managedObjectContext) private var viewContext
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Order.id, ascending: true)],
+        animation: .default)
+    private var order: FetchedResults<Order>
 
     @State private var showingAddExpense = false
 
