@@ -21,6 +21,7 @@ expenseAmount, Integer 16
 
 import Foundation
 import SwiftUI
+import CoreData
 
 struct AddOrder: View {
     @Environment(\.managedObjectContext) var moc
