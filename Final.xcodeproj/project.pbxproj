@@ -16,8 +16,8 @@
 		3F96556E264C0F2C00B96E5F /* AddExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96556D264C0F2C00B96E5F /* AddExpense.swift */; };
 		3F965571264C0F6100B96E5F /* AddOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F965570264C0F6100B96E5F /* AddOrder.swift */; };
 		3F965574264C0F8B00B96E5F /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F965573264C0F8B00B96E5F /* Expenses.swift */; };
-		3F965577264C0FC400B96E5F /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F965576264C0FC400B96E5F /* Orders.swift */; };
 		3F96557A264C0FE800B96E5F /* OrderDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F965579264C0FE800B96E5F /* OrderDetails.swift */; };
+		3F96557E264C25D200B96E5F /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96557D264C25D200B96E5F /* Orders.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,8 @@
 		3F96556D264C0F2C00B96E5F /* AddExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpense.swift; sourceTree = "<group>"; };
 		3F965570264C0F6100B96E5F /* AddOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrder.swift; sourceTree = "<group>"; };
 		3F965573264C0F8B00B96E5F /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
-		3F965576264C0FC400B96E5F /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
 		3F965579264C0FE800B96E5F /* OrderDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetails.swift; sourceTree = "<group>"; };
+		3F96557D264C25D200B96E5F /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 			children = (
 				3F965558264C0D3500B96E5F /* FinalApp.swift */,
 				3F96555A264C0D3500B96E5F /* ContentView.swift */,
-				3F965576264C0FC400B96E5F /* Orders.swift */,
+				3F96557D264C25D200B96E5F /* Orders.swift */,
 				3F965579264C0FE800B96E5F /* OrderDetails.swift */,
 				3F965570264C0F6100B96E5F /* AddOrder.swift */,
 				3F965573264C0F8B00B96E5F /* Expenses.swift */,
@@ -165,7 +165,7 @@
 				3F96555B264C0D3500B96E5F /* ContentView.swift in Sources */,
 				3F965571264C0F6100B96E5F /* AddOrder.swift in Sources */,
 				3F965559264C0D3500B96E5F /* FinalApp.swift in Sources */,
-				3F965577264C0FC400B96E5F /* Orders.swift in Sources */,
+				3F96557E264C25D200B96E5F /* Orders.swift in Sources */,
 				3F96557A264C0FE800B96E5F /* OrderDetails.swift in Sources */,
 				3F965574264C0F8B00B96E5F /* Expenses.swift in Sources */,
 			);
